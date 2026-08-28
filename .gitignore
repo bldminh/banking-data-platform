@@ -1,0 +1,165 @@
+# ============================================================
+# BANKING DATA PLATFORM - ROOT GITIGNORE
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Environment / Secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+*.secret
+*.secrets
+*.credentials
+credentials/
+secrets/
+
+# Private keys / certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# ------------------------------------------------------------
+# 2. Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ------------------------------------------------------------
+# 3. IDE / Editor
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary editor files
+*~
+tempCodeRunnerFile.py
+
+# ------------------------------------------------------------
+# 4. Logs
+# ------------------------------------------------------------
+logs/
+log/
+*.log
+
+# ------------------------------------------------------------
+# 5. Generated data
+# ------------------------------------------------------------
+
+# Generic generated output
+output/
+outputs/
+generated_data/
+generated/
+data/generated/
+
+# CSV
+*.csv
+
+# Parquet
+*.parquet
+*.parquet.gzip
+
+# JSON generated data
+*.json
+
+# Avro / ORC
+*.avro
+*.orc
+
+# ------------------------------------------------------------
+# 6. Database dumps / backups
+# ------------------------------------------------------------
+
+# PostgreSQL
+*.dump
+*.backup
+*.bak
+*.sql.gz
+*.dump.gz
+
+# Generic database exports
+*.db
+*.sqlite
+*.sqlite3
+
+# ------------------------------------------------------------
+# 7. Local database files / runtime
+# ------------------------------------------------------------
+data/
+database/
+db_data/
+postgres_data/
+postgresql_data/
+
+# Docker volumes if created locally
+.docker/
+docker-data/
+docker-volumes/
+
+# ------------------------------------------------------------
+# 8. Spark / Kafka / Airflow generated files
+# ------------------------------------------------------------
+spark-warehouse/
+checkpoint/
+checkpoints/
+warehouse/
+airflow/logs/
+airflow/__pycache__/
+
+# Kafka local data
+kafka-data/
+zookeeper-data/
+
+# ------------------------------------------------------------
+# 9. Temporary files
+# ------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ------------------------------------------------------------
+# 10. OS
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# 11. Jupyter
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# 12. Build / distribution
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+
+# ------------------------------------------------------------
+# 13. Terraform / infrastructure local state
+# ------------------------------------------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
